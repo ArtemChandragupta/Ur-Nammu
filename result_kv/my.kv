@@ -1,0 +1,38 @@
+<Interface>:
+  GridLayout:
+    cols: 2
+    padding: 10
+    spacing: 10
+
+    Button:
+      text: 'Прменить операцию'
+      pos: 50, 50
+      size: 50, 20
+      on_press: root.excel()
+
+    BoxLayout:
+      orientation: 'vertical'
+      Label:
+        text: 'Адрес вывода:'
+      TextInput:
+        id: input_с
+        multiline: False
+        on_text: root.on_c_text(self, self.text)
+
+    BoxLayout:
+      orientation: 'vertical'
+      Label:
+        text: 'Адрес числа a:'
+      TextInput:
+        id: input_a
+        multiline: False
+        on_text: root.on_a_text(self, self.text)
+
+    BoxLayout:
+      orientation: 'vertical'
+      Label:
+        text: 'Адрес числа b:'
+      TextInput:
+        id: input_b
+        multiline: False
+        on_text: root.on_b_text(self, self.text)
