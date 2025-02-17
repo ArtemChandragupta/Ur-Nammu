@@ -8,6 +8,7 @@ class Interface(BoxLayout):
     adress_a = StringProperty("")
     adress_b = StringProperty("")
     ardess_c = StringProperty("")
+    error    = StringProperty("")
 
     def on_a_text(self, instance, value):
         self.adress_a = value
@@ -35,9 +36,9 @@ class Interface(BoxLayout):
 
             # Сохраняем в книгу с формулами - так мы их не теряем
             wb_formula.save('test.xlsx')
-            print("Data saved successfully.")
+            self.error = "Data saved successfully."
         except Exception as e:
-            print(f"An error occurred: {e}")
+            self.error = f"An error occurred: {e}"
 
 class MyApp(App):
     def build(self):
