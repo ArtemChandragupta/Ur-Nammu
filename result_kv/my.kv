@@ -1,14 +1,18 @@
 <Interface>:
+  BoxLayout:
+    orientation: 'vertical'
+    Button:
+      text: 'Прменить операцию'
+      pos:  50, 50
+      size: 50, 20
+      on_press: root.excel()
+    Label:
+      text: root.adress_a
+
   GridLayout:
     cols: 2
     padding: 10
     spacing: 10
-
-    Button:
-      text: 'Прменить операцию'
-      pos: 50, 50
-      size: 50, 20
-      on_press: root.excel()
 
     BoxLayout:
       orientation: 'vertical'
