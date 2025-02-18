@@ -1,5 +1,8 @@
 import openpyxl
 
+from kivy.config import Config
+Config.set('input', 'mouse', 'mouse,disable_multitouch')
+
 from kivy.app            import App
 from kivy.uix.boxlayout  import BoxLayout
 from kivy.properties     import StringProperty
@@ -36,9 +39,9 @@ class Interface(BoxLayout):
 
             # Сохраняем в книгу с формулами - так мы их не теряем
             wb_formula.save('test.xlsx')
-            self.error = "Data saved successfully."
+            self.error = "Выполнено успешно."
         except Exception as e:
-            self.error = f"An error occurred: {e}"
+            self.error = f"Произошла ошибка: {e}"
 
 class MyApp(App):
     def build(self):

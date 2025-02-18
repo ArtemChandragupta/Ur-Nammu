@@ -2,6 +2,7 @@
   BoxLayout:
     orientation: 'vertical'
     padding: 10
+    spacing: 10
 
     Button:
       text: 'Прменить операцию'
@@ -10,37 +11,46 @@
       on_press: root.excel()
     Label:
       text: root.error
+      valign: 'top'
+      text_size: self.size
 
-  GridLayout:
+  BoxLayout:
+    orientation: 'vertical'
     cols: 2
     padding: 10
     spacing: 10
 
     BoxLayout:
-      orientation: 'vertical'
+      # orientation: 'vertical'
       Label:
         text: 'Адрес числа a:'
       TextInput:
         id: input_a
         multiline: False
         on_text: root.on_a_text(self, self.text)
+        font_size: 30
+        halign: 'center'
 
     BoxLayout:
-      orientation: 'vertical'
+      # orientation: 'vertical'
       Label:
         text: 'Адрес числа b:'
       TextInput:
         id: input_b
         multiline: False
         on_text: root.on_b_text(self, self.text)
+        font_size: 30
+        halign: 'center'
 
     BoxLayout:
-      orientation: 'vertical'
+      # orientation: 'vertical'
       Label:
         text: 'Адрес вывода:'
       TextInput:
         id: input_с
         multiline: False
         on_text: root.on_c_text(self, self.text)
+        font_size: 30
+        halign: 'center'
 
 
